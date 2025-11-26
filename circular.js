@@ -1,3 +1,3 @@
 const circular = {
-    key : circular 
+    circular : circular
 }
