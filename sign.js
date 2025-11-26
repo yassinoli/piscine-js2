@@ -9,9 +9,10 @@ function sign(a){
 }
 
 function sameSign(a,b){
- if (a*b >= +0 ){
+ if (a*b > 0 ){
     return true
  }else{
     return false
  }
 }
+
