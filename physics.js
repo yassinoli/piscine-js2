@@ -5,5 +5,5 @@ function getAcceleration(obj){
     if (!Number.isNaN(a1)) return a1 ;
     else if (!Number.isNaN(a2)) return a2 ;
     else if (!Number.isNaN(a3)) return a3 ;
-    else return "impossible"
+    return 'impossible'
 }
