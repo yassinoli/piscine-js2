@@ -12,8 +12,4 @@ const clone2={
 }
 Object.freeze(clone2)
 
-const samePerson = {
-    name : person.name ,
-    age : person.age ,
-    country : person.country
-}
+const samePerson = person
