@@ -9,6 +9,6 @@ const uranus = earth*84.016846
  const neptune = earth*164.79132 
  
 function dogYears(nameOfPlanet , dogAge){
-    return ((dogAge)/ (nameOfPlanet))*7
+    return Number((((dogAge)/ (nameOfPlanet))*7).toFixed(2))
 }
 
