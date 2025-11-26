@@ -1,3 +1,3 @@
 function concatStr(a,b){
-    return a+b
+    return toString(a)+toString(b)
 }
