@@ -4,3 +4,4 @@ function id(a){
 function getLength(a){
     return a.length
 }
+
