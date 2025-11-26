@@ -1,8 +1,10 @@
 function sign(a){
-    switch (a){
-        case  (a>0) : return 1 ;
-        case (a<0) : return -1 ;
-        default : return 0
+    if (a>0){
+        return 1
+    }else if (a<0){
+        return -1
+    }else{
+        return 0
     }
 }
 
