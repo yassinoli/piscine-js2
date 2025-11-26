@@ -6,7 +6,7 @@ const clone1 = {
 Object.freeze(clone1)
 
 const clone2={
-    name : personalbar.name ,
+    name : person.name ,
     age :person.age+1 ,
     country : "FR"
 }
