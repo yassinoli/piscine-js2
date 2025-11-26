@@ -1,8 +1,10 @@
 function isPositive(num){
     if (num>=0){
         return true
+    }else{
+       return false 
     }
-    return false
+    
 }
 function abs(num){
     if (num <0 ){
@@ -12,3 +14,4 @@ function abs(num){
     }
    
 }
+
