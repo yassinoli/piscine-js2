@@ -12,4 +12,3 @@ function dogYears(nameOfPlanet , dogAge){
     return ((dogAge)/ (nameOfPlanet))*7
 }
 
-console.log(dogYears(earth,1000000000))
