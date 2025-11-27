@@ -51,6 +51,8 @@ function strToObj(str) {
 
 function superTypeOf(val){
   if (val === null) return 'null'
+    if (val === undefined) return 'undefined'
+
   if (typeof(val)==='object') {
     return Object.prototype.toString.call(val).slice(8,-1)
   }else{
@@ -58,4 +60,4 @@ function superTypeOf(val){
   }
 }
 
-console.log(superTypeOf(null))
+console.log(superTypeOf(undefined))
