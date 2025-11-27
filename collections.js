@@ -54,6 +54,8 @@ function superTypeOf(val){
   if (typeof(val)==='object') {
     return Object.prototype.toString.call(val).slice(8,-1)
   }else{
-    return typeof(val)
+    return (typeof(val)).toUpperCase()[0] + (typeof(val)).slice(1)
   }
 }
+
+console.log(superTypeOf(''))
