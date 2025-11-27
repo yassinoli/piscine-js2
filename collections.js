@@ -24,10 +24,7 @@ function strToSet(str){
 }
 
 function mapToObj(map){
-    let obj = {}
-    for (let [i,j] of map) {
-        obj[i]=j
-    }
+    let obj = Object.fromEntries(map) 
     return obj
 }
 
@@ -41,10 +38,7 @@ function objToMap(obj) {
 
 
 function arrToObj(arr) {
-  let obj = {};
-  arr.forEach((val, i) => { 
-    obj[i] = val
-  })
+  let obj = {...arr}
   return obj;
 }
 
