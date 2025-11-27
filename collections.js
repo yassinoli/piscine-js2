@@ -7,7 +7,7 @@ function arrToStr(arr){
     return arr.join("")
 }
 
-function setArr(set){
+function setToArr(set){
      return [...set]
 }
 
