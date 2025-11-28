@@ -38,26 +38,35 @@ function ceil(x){
 
     return intPrt*sgn
 }
+function floor(x) {
+    let intPart = 0;
+    let sign = 1;
 
-function floor(x){
-    let intPrt = 0
-    let sgn = 1
-      if (x < 0) {
-        sgn = -1;
+    if (x < 0) {
+        sign = -1;
         x = -x;
     }
     
     while (x >= 1) {
-        intPrt++;
+        intPart++;
         x -= 1;
     }
-    if (sgn === 1){
-        return intPrt+1
-    }else{
-        return -intPrt-1
-    }
 
+    if (x === 0) {
+        if( sign === 1){
+            return intPart
+        }else{
+            return -intPart
+        }
+    } else {
+         if( sign === 1){
+            return intPart
+        }else{
+            return -intPart-1
+        }
+    }
 }
+
 
 
  function trunc(x){
@@ -82,3 +91,4 @@ function floor(x){
 
 
 console.log(floor(-3.4))
+
