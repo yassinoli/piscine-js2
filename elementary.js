@@ -13,6 +13,7 @@ function multiply(a, b) {
 
 
 function divide(b,a){
+    if (a>b) return 0;
     let c = 1
     if ((b < 0 && a>0) || (b > 0 && a<0)) c = -1 ;
     let count = 0
@@ -22,12 +23,14 @@ function divide(b,a){
         count++
        x = x-y
     }
+
     return multiply(count,c)
 }
 
+
 function modulo(a, b) {
     let c = 1
-     if ( a<0) c = -1 ;
+     if (a<0) c = -1 ;
     let x = Math.abs(b)
     let y = Math.abs(a)
     while(y>=x){
