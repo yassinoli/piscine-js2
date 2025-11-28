@@ -1,5 +1,4 @@
 function indexOf(arr,elem,j=0){
-    if (!j) j = 0 ;
     for (let x = j ; x<arr.length ; x++){
         if (arr[x]===elem){
             return x
@@ -9,8 +8,7 @@ function indexOf(arr,elem,j=0){
 }
 
 function lastIndexOf(arr,elem,j = arr.length - 1){
-    if (!j) j = 0 ;
-     for ( let x=arr.length-1 ; x>j ; x++){
+     for ( let x=j ; x>=0 ; x--){
         if (arr[x]===elem){
             return x
         }
