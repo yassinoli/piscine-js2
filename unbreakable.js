@@ -1,7 +1,12 @@
 function split(str, elem) {
+
     let res = [];
     let tmp = "";
-    for (let i = 0; i <= str.length; i++) {
+    for (let i = 0; i < str.length; i++) {
+        if (elem===""){
+             res.push(str[i]);
+             continue
+        }
         if (str.slice(i, i + elem.length) === elem || i === str.length) {
             res.push(tmp);
             tmp = "";
@@ -10,6 +15,8 @@ function split(str, elem) {
         }
         tmp += str[i];
     }
+                res.push(tmp);
+
     return res;
 }
 
@@ -25,5 +32,8 @@ function join(arr,elem){
     }
     return res
 }
+
+console.log(split('hey  jfd  jeh  idfhi',"  "));
+
 
 
