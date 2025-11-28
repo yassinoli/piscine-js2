@@ -15,7 +15,10 @@ function split(str, elem) {
         }
         tmp += str[i];
     }
-                res.push(tmp);
+
+    if (elem !== "") {
+        res.push(tmp)
+    }
 
     return res;
 }
@@ -33,7 +36,7 @@ function join(arr,elem){
     return res
 }
 
-console.log(split('hey  jfd  jeh  idfhi',"  "));
+console.log(split('riad',""));
 
 
 
