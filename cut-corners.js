@@ -2,7 +2,7 @@ function round(x){
    let intPrt = 0
     let sgn = 1
       if (x < 0) {
-        sign = -1;
+        sgn = -1;
         x = -x;
     }
     
