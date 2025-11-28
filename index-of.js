@@ -1,5 +1,5 @@
 function indexOf(arr,elem,j){
-    for (x = j ; x<arr.length ; x++){
+    for (let x = j ; x<arr.length ; x++){
         if (arr[x]===elem){
             return x
         }
@@ -8,7 +8,7 @@ function indexOf(arr,elem,j){
 }
 
 function lastIndexOf(arr,elem,j){
-     for ( x=arr.length-1 ; x>j ; x++){
+     for ( let x=arr.length-1 ; x>j ; x++){
         if (arr[x]===elem){
             return x
         }
@@ -17,7 +17,7 @@ function lastIndexOf(arr,elem,j){
 }
 
 function includes(arr,elem){
-     for (x = 0 ; x<arr.length ; x++){
+     for (let x = 0 ; x<arr.length ; x++){
         if (arr[x]===elem){
             return true
         }
