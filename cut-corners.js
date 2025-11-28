@@ -51,9 +51,12 @@ function floor(x){
         intPrt++;
         x -= 1;
     }
- 
+    if (sgn === 1){
+        return intPrt+1
+    }else{
+        return -intPrt-1
+    }
 
-    return (intPrt+1)*sgn
 }
 
 
@@ -71,21 +74,8 @@ function floor(x){
     }
  
 
-    return intPrt*sgn
+   return intPrt*sgn
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
