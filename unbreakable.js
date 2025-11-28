@@ -26,5 +26,4 @@ function join(arr,elem){
     return res
 }
 
-console.log(split("heyhayhey",'yh'));
 
