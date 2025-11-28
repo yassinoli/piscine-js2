@@ -26,7 +26,7 @@ function ceil(x){
     let intPrt = 0
     let sgn = 1
       if (x < 0) {
-        sign = -1;
+        sgn = -1;
         x = -x;
     }
     
@@ -36,14 +36,14 @@ function ceil(x){
     }
  
 
-    return intPrt
+    return intPrt*sgn
 }
 
 function floor(x){
     let intPrt = 0
     let sgn = 1
       if (x < 0) {
-        sign = -1;
+        sgn = -1;
         x = -x;
     }
     
@@ -53,7 +53,7 @@ function floor(x){
     }
  
 
-    return intPrt+1
+    return (intPrt+1)*sgn
 }
 
 
@@ -61,7 +61,7 @@ function floor(x){
     let intPrt = 0
     let sgn = 1
       if (x < 0) {
-        sign = -1;
+        sgn = -1;
         x = -x;
     }
     
@@ -71,7 +71,7 @@ function floor(x){
     }
  
 
-    return intPrt
+    return intPrt*sgn
  }
 
 
