@@ -40,12 +40,20 @@ function ceil(x) {
 }
 function round(x) {
     if (x >= 0) {
-        let ip = intPrt(x);
-        if (x - ip >= 0.5) return ip + 1;
-        return ip;
+        let ip = intPrt(x)
+        if (x - ip >= 0.5){
+            return ip +1
+        }else{
+            return ip
+        }
     } else {
-        let ip = intPrt(-x);
-        if ((-x) - ip > -0.5) return -ip;
-        return -(ip + 1);
+        let ax = -x      
+        let ip = intPrt(ax)
+        if (ax - ip >= 0.5){
+            return -(ip+1)
+        }else{
+            return -ip
+        }
+        
     }
 }
