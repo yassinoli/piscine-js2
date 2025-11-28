@@ -12,7 +12,7 @@ function multiply(a, b) {
 }
 
 
-function devide(b,a){
+function divide(b,a){
     let c = 1
     if ((b < 0 && a>0) || (b > 0 && a<0)) c = -1 ;
     let count = 0
