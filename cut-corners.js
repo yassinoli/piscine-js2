@@ -54,7 +54,7 @@ function floor(x){
     if (sgn === 1){
         return intPrt+1
     }else{
-        return -intPrt-1
+        return -intPrt
     }
 
 }
@@ -81,3 +81,4 @@ function floor(x){
 
 
 
+console.log(floor(-4.4))
