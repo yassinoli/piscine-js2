@@ -11,20 +11,17 @@ function multiply(a, b) {
   return c;
 }
 
-
-function divide(b,a){
-    if (a>b) return 0;
-    let c = 1
-    if ((b < 0 && a>0) || (b > 0 && a<0)) c = -1 ;
-    let count = 0
-    let x = Math.abs(b)
-    let y = Math.abs(a)
-    while (x > 0){
-        count++
-       x = x-y
+function divide(b, a) {
+    let c = 1;
+    if ((b < 0 && a > 0) || (b > 0 && a < 0)) c = -1;
+    let count = 0;
+    let x = Math.abs(b);
+    let y = Math.abs(a);
+    while (x >= y) {
+        count++;
+        x -= y;
     }
-
-    return multiply(count,c)
+    return multiply(count, c);
 }
 
 
