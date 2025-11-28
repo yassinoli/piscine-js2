@@ -18,6 +18,12 @@ function keepLast(str){
     return str.slice(str.length-2)
 }
 
-function keepFirstLast(str){
-    return  str.slice(0,2) + str.slice(str.length-2)
+function keepFirstLast(str) {
+    if (str.length < 4) {
+        return str
+    }
+    return str.slice(0, 2) + str.slice(-2)
 }
+
+
+
