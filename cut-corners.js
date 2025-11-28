@@ -34,40 +34,49 @@ function ceil(x){
         intPrt++;
         x -= 1;
     }
- 
- if( sgn === 1){
+    
+     if (x === 0) {
+        if( sgn === 1){
+            return intPrt
+        }else{
+            return -intPrt
+        }
+    } else {
+         if( sgn === 1){
             return intPrt+1
         }else{
             return -intPrt
         }
+    }
+
 }
 
 
 function floor(x) {
-    let intPart = 0;
-    let sign = 1;
+    let intPrt = 0;
+    let sgn = 1;
 
     if (x < 0) {
-        sign = -1;
+        sgn = -1;
         x = -x;
     }
     
     while (x >= 1) {
-        intPart++;
+        intPrt++;
         x -= 1;
     }
 
     if (x === 0) {
-        if( sign === 1){
-            return intPart
+        if( sgn === 1){
+            return intPrt
         }else{
-            return -intPart
+            return -intPrt
         }
     } else {
-         if( sign === 1){
-            return intPart
+         if( sgn === 1){
+            return intPrt
         }else{
-            return -intPart-1
+            return -intPrt-1
         }
     }
 }
