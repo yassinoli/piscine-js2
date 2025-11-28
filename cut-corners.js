@@ -35,9 +35,14 @@ function ceil(x){
         x -= 1;
     }
  
-
-    return intPrt*sgn
+ if( sgn === 1){
+            return intPrt+1
+        }else{
+            return -intPrt
+        }
 }
+
+
 function floor(x) {
     let intPart = 0;
     let sign = 1;
@@ -90,5 +95,4 @@ function floor(x) {
 
 
 
-console.log(floor(-3.4))
 
