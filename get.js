@@ -1,13 +1,15 @@
+function get(src, path) {
+  const keys = path.split('.');
+  let current = src;
 
-
-function get(src,path){
-    const key = path.split('.')
-    let cur = src
-    for (let ky of key){
-        if (cur == nul || !(ky in current)){
-            return undefined
-        }
-        cur = cur[ky]
+  for (let key of keys) {
+    if (current == null || !(key in current)) {
+      return undefined;
     }
-    return cur 
+    current = current[key];
+  }
+
+  return current;
 }
+
+
