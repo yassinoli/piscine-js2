@@ -1,7 +1,8 @@
 function pyramid(st,n){
     let s =""
     for (let i =1 ; i<=n ; i++){
-        s+= " ".repeat(n-i)
+        
+        s+= " ".repeat((n-i)*st.length) 
         for (let j =1 ; j<2*i ; j++){
         s+=st
     }
@@ -9,6 +10,8 @@ function pyramid(st,n){
         s+='\n'
     }
     }
+
     return s
 }
 
+console.log(pyramid('ABC',7))
