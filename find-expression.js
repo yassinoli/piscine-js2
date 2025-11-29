@@ -8,9 +8,9 @@ function findExpression(num) {
     }
 
     if (findExpression(num/2)) {
-        return findExpression(num / 2) + " *2";
+        return findExpression(num / 2) + " " + mul2;
     } else if( findExpression(num -4)) {
-        return findExpression(num - 4) + " +4";
+        return findExpression(num - 4) + " " + add4;
     }
 }
 
