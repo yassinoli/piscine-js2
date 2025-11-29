@@ -1,6 +1,8 @@
-function get(src , path){
-    let r = path.split('.')
-    return src[r[0]][r[1]]
+function get(src, path) {
+  return path.split('.').reduce((obj, key) => {
+    if (obj && typeof obj === 'object') {
+      return obj[key];
+    }
+  }, src);
 }
-
 
