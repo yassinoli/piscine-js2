@@ -4,7 +4,7 @@ const groupPrice =(str)=>{
     const num1 = /\d+(?=[.])/g
     const num2 = /(?<=[.])\d+/g
     let res = str.match(reg)
-    if (reg){
+    if (res){
        
     res.forEach(elem => {
         let sub =[]
