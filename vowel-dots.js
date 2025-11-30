@@ -1,6 +1,6 @@
 const vowelDots =(str)=>{
     let st = ''
-    const vowels = /[AaEeIiOoUuYy]/
+    let vowels = /[AaEeIiOoUuYy]/
     for (let i = 0 ; i<str.length ; i++){
         if (str[i].match(vowels)){
             st+=str[i]+'.'
@@ -11,3 +11,4 @@ const vowelDots =(str)=>{
     return st
 }
 
+console.log(vowelDots('a'));
