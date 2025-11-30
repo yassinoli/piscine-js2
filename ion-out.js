@@ -1,15 +1,6 @@
 const ionOut=(str)=>{
-    const reg = /tion\b/i
+    const reg = /[\w]+t(?=ion)/g
+    return str.match(reg) || []
+  }
 
-    let arr = str.split(' ')
-    let res = []
-    arr.forEach(elem=> {
-        if (elem.match(reg)){
-            res.push(elem.replace(reg,'t'))
-        }
-    });
-    return res
-     }
-
-     
-
+    
