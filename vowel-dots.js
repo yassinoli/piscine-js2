@@ -1,4 +1,4 @@
-let vowels = /[AaEeIiOoUuYy]/
+let vowels = /[AaEeIiOoUu]/
 const vowelDots =(str)=>{
     let st = ''
     for (let i = 0 ; i<str.length ; i++){
@@ -11,4 +11,4 @@ const vowelDots =(str)=>{
     return st
 }
 
-console.log(vowelDots('a'));
+console.log(vowelDots('rhytm'));
