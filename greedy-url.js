@@ -6,10 +6,10 @@ const  getURL =(str)=>{
 const greedyQuery = (str)=>{
     let arr = []
     const reg1 = /&/g
-     const reg = /https?:\/\/[\S]+/g
+     const reg = /https?:\/\/\S+/g
      let res =  str.match(reg)
      res.forEach(element => {
-        if(element.match(reg1) && element.match(reg1).length>3){
+        if(element.match(reg1) && element.match(reg1).length>=2){
             arr.push(element)
         }
      });
@@ -22,11 +22,13 @@ const notSoGreedy =(str)=>{
      const reg = /https?:\/\/[\S]+/g
      let res =  str.match(reg)
      res.forEach(element => {
-        if(element.match(reg1) && element.match(reg1).length>=1 &&  element.match(reg1).length<=3){
+        if(element.match(reg1) && element.match(reg1).length>=1 &&  element.match(reg1).length<=2){
             arr.push(element)
         }
      });
      return arr
 }
+
+
 
 
