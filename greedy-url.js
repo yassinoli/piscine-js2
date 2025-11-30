@@ -9,7 +9,7 @@ const greedyQuery = (str)=>{
      const reg = /https?:\/\/[\S]+/g
      let res =  str.match(reg)
      res.forEach(element => {
-        if(element.match(reg1) && element.match(reg1).length>=3){
+        if(element.match(reg1) && element.match(reg1).length>3){
             arr.push(element)
         }
      });
