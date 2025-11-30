@@ -1,6 +1,6 @@
 const groupPrice =(str)=>{
     let final =[]
-    const reg = /[a-zA-Z]+\d+[.]\d+/g
+    const reg = /[\S]+\d+[.]\d+/g
     const num1 = /\d+(?=[.])/g
     const num2 = /(?<=[.])\d+/g
     let res = str.match(reg)
@@ -9,8 +9,8 @@ const groupPrice =(str)=>{
     res.forEach(elem => {
         let sub =[]
         sub.push(elem)
-        sub.push(elem.match(num2)[0])
         sub.push(elem.match(num1)[0])
+        sub.push(elem.match(num2)[0])
         final.push(sub)
     }); 
     }
@@ -18,4 +18,5 @@ const groupPrice =(str)=>{
     return final
 
 }
+
 
