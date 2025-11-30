@@ -1,11 +1,9 @@
-const sameAmount =(str , rgx1 , rgx2)=>{
-    str = String(str)
-const rg1 = str.match(rgx1)
-const rg2 = str.match(rgx2)
-    if (rg1 & rg2){
-        if(str.match(rgx1).length === str.match(rgx2)){
-            return true
-        }
-    }
-    return false
-}
+const sameAmount = (str, rgx1, rgx2) => {
+    const r1 = new RegExp(rgx1, "g")
+    const r2 = new RegExp(rgx2, "g")
+
+    const m1 = str.match(r1) || []
+    const m2 = str.match(r2) || []
+
+    return  m1.length === m2.length
+};
