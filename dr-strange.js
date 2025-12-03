@@ -9,14 +9,14 @@ const addWeek = (first) => {
         switch (sw){
             case 0 : day = "Monday"; break
             case 1 : day = "Tuesday"; break
-            case 2 : day = "Wednsday"; break
+            case 2 : day = "Wednesday"; break
             case 3 : day = "Thursday"; break
             case 4 : day = "Friday"; break
             case 5 : day = "Saturday"; break
             case 6 : day = "Sunday"; break
             case 7 : day = "secondMonday"; break
             case 8 : day = "secondTuesday"; break
-            case 9 : day = "secondWednsday"; break
+            case 9 : day = "secondWednesday"; break
             case 10 : day = "secondThursday"; break
             case 11 : day = "secondFriday"; break
             case 12 : day = "secondSaturday"; break
