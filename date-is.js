@@ -1,6 +1,6 @@
 function isValid(date) {
-if (typeof input === "number") {
-    return !isNaN(new Date(input).getTime());
+if (typeof date === "number") {
+    return !isNaN(new Date(date).getTime());
   }
     return date instanceof Date && !isNaN(date.getTime())  && typeof date != 'number'
 
