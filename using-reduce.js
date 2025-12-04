@@ -1,9 +1,7 @@
-function adder(arr){
-    let num = 0
-    return arr.reduce((prev, cur) => {
-        return cur+prev
-    },num)
+function adder(arr) {
+  return arr.reduce((sum, n) => sum + n, 0);
 }
+
 
 function sumOrMul(arr,num){
     return arr.reduce((prev , cur) => {
