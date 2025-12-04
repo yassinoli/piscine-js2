@@ -9,10 +9,11 @@ function citiesOnly(arr){
 function upperCasingStates(arr){
     let res = []
     arr.map((elm) => {
-        res.push(...[elm[0].toUpperCase() + elm.slice(1) ])
+        res.push(...[elm[0].toUpperCase() + elm.slice(1).toLowerCase() ])
     })
     return res
 }
+
 
 function fahrenheitToCelsius(arr){
     let res =[]
