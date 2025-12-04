@@ -36,5 +36,8 @@ function filter1DistinctVowel(arr) {
 }
 
 function multiFilter(arr){
-    return arr.filter((elm) => (elm.capital.length >5) && (((elm.name)[0].match(/[eaiouEOUIA]/g) || []).length === 0) && (((elm.tag).match(/[eaiouEOUIA]/g)|| []).length >= 1) && (elm.tag !== 'South'))
+    return arr.filter((elm) => (elm.capital.length >=8)
+    && (((elm.name)[0].match(/[eaiouEOUIA]/g) || []).length === 0) 
+    && (((elm.tag).match(/[eaiouEOUIA]/g)|| []).length >= 1) 
+    && (elm.tag !== 'South'))
 }
