@@ -1,6 +1,6 @@
 function filterShortStateName(arr){
     return arr.filter((item) => 
-        item.length >= 5
+        item.length > 5
     )
 }
 
