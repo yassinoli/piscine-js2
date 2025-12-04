@@ -1,5 +1,5 @@
-function adder(arr) {
-  return arr.reduce((sum, n) => sum + n, 0);
+function adder(arr,num) {
+  return arr.reduce((sum, n) => sum + n, num);
 }
 
 
