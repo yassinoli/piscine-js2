@@ -1,7 +1,7 @@
 function matchCron(cron , date){
     let minute = date.getMinutes()
     
-    let month = date.getMonth()
+    let month = date.getMonth()+1
     let hour = date.getHours()
     let dayM = date.getDate()
     let dayW = date.getDay()
@@ -12,3 +12,4 @@ function matchCron(cron , date){
     }
     return false
 }
+console.log(matchCron('* * * 2 *', new Date('2021-02-01 00:00:00')));
