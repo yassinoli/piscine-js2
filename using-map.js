@@ -49,8 +49,13 @@ function tempForecasts(arr) {
   let res = [];
   arr.map((elm) => {
     let x = elm.temperature;
-    x = fToC(x);
-    res.push(x + " in " + elm.city + ", " + elm.state);
+    if (x[x.length-1]=='F'){
+        x = fToC(x);
+    }else{
+        x += 'elecius'
+    }
+    
+    res.push(x + " in " + capitalize(elm.city) + ", " + capitalize(elm.state));
   });
   return res;
 }
