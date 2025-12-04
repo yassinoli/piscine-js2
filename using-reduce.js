@@ -1,9 +1,9 @@
-function adder(arr,num) {
+function adder(arr,num=0) {
   return arr.reduce((sum, n) => sum + n, num);
 }
 
 
-function sumOrMul(arr,num){
+function sumOrMul(arr,num=0){
     return arr.reduce((prev , cur) => {
         if (cur%2==0){
             return prev*cur
@@ -14,8 +14,10 @@ function sumOrMul(arr,num){
 }
 
 
-function funcExec(arr){
-    return arr
+function funcExec(arr,num=0){
+    return arr.reduce((prev, cur) => {
+        return cur(prev)
+    }, num)
 }
 
 
