@@ -1,8 +1,21 @@
 function filterShortStateName(arr){
     return arr.filter((item) => 
-        item.length > 5
+        item.length < 7
     )
 }
+console.log(filterShortStateName([
+    'Alaska',
+    'Hawaii',
+    'Idaho',
+    'Iowa',
+    'Kansas',
+    'Maine',
+    'Nevada',
+    'Ohio',
+    'Oregon',
+    'Texas',
+    'Utah',
+  ]));
 
 function filterStartVowel(ar){
     return ar.filter((elm) => elm[0].match(/[eaiouEOUIA]/))
