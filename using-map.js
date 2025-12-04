@@ -35,7 +35,7 @@ function fahrenheitToCelsius(arr) {
 function trimTemp(arr) {
   let res = [];
   arr.map((elm) => {
-    let x = elm.temperature.trim();
+    let x = elm.temperature.replaceAll(' ','');
     elm.temperature = x;
     res.push(elm);
   });
