@@ -9,7 +9,7 @@ function dayOfTheYear(date){
     fstDate.setUTCFullYear(year)
 
    let bfrlst = ((date.getTime() - fstDate.getTime()) / 1000 / 3600 / 24) +1
-   if (bfrlst >365){
+   if (bfrlst >366){
     return 1
    } else{
     return bfrlst
