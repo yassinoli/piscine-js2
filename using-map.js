@@ -43,7 +43,7 @@ function trimTemp(arr) {
 }
 
 function fToC(F) {
-  return Math.round(((F.split("°")[0] - 32) * 5) / 9) + "°Celcius";
+  return Math.floor(((F.split("°")[0] - 32) * 5) / 9) + "°Celcius";
 }
 function tempForecasts(arr) {
   let res = [];
