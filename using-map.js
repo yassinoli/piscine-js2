@@ -25,10 +25,12 @@ function upperCasingStates(arr) {
 function fahrenheitToCelsius(arr) {
   let res = [];
   arr.map((elm) => {
-    res.push(Math.round(((elm.split("°")[0] - 32) * 5) / 9) + "°C");
+    res.push(Math.floor(((elm.split("°")[0] - 32) * 5) / 9) + "°C");
   });
   return res;
 }
+
+
 
 function trimTemp(arr) {
   let res = [];
