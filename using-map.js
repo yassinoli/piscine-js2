@@ -52,7 +52,7 @@ function tempForecasts(arr) {
     if (x[x.length-1]=='F'){
         x = fToC(x);
     }else{
-        x += 'elecius'
+        x += 'elcius'
     }
     
     res.push(x + " in " + capitalize(elm.city) + ", " + capitalize(elm.state));
