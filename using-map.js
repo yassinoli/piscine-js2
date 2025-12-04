@@ -43,7 +43,7 @@ function trimTemp(arr) {
 }
 
 function fToC(F) {
-  return Math.floor(((F.split("°")[0] - 32) * 5) / 9) + "°Celcius";
+  return Math.floor(((F.split("°")[0] - 32) * 5) / 9) + "°Celsius";
 }
 function tempForecasts(arr) {
   let res = [];
@@ -52,7 +52,7 @@ function tempForecasts(arr) {
     if (x[x.length-1]=='F'){
         x = fToC(x);
     }else{
-        x += 'elcius'
+        x += 'elsius'
     }
     
     res.push(x + " in " + capitalize(elm.city) + ", " + capitalize(elm.state));
