@@ -1,6 +1,6 @@
-function forEach(arr,func){
-    for(let i=0 ;i<arr.length ; i++){
-        arr[i] = func(arr[i])
-    }
-    return arr
+function forEach(arr, func) {
+  for (let i = 0; i < arr.length; i++) {
+    func(arr[i], i, arr)
+  }
+  return undefined
 }
