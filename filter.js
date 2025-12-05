@@ -28,7 +28,7 @@ function partition(arr,func){
             tmp.push(arr[i])
         }
     }
-    res.push(tmp)
-return res
+    
+return [res , tmp]
 }
 
