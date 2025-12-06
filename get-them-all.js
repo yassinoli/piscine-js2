@@ -28,11 +28,10 @@ export function getActive(){
 
 
 export function getBonannoPisano(){
-    const bnn = document.getElementById("BonnanoPisano")
+    const bnn = document.getElementById("BonannoPisano")
     const nobnn = Array.from(document.querySelectorAll("a.classical.active")).filter((a) => a != bnn )
     return [bnn , nobnn]
 
 }
-
 
 
