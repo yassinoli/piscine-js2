@@ -1,16 +1,31 @@
+
 export function getArchitects(){
-    return [document.querySelectorAll("a") , document.querySelectorAll("body > not:(<a>)") ]
+    const arch = Array.from(document.querySelectorAll("a"))
+    const nonArch = Array.from(document.body.querySelectorAll("*")).filter((elm) =>  elm.tagName.toLocaleLowerCase() != "a")
+    return [arch , nonArch]
 }
 
 export function getClassical(){
-    return [document.getElementsByClassName("classical") ,  document.getElementsByClassName("not:(<classical>)")]
+
+    const arc = Array.from(document.querySelectorAll("a"))
+    const cls = arc.filter((itm) => itm.classList.contains('classical') )
+    const nocls = arc.filter((itm) => !itm.classList.contains('classical') )
+    return [cls , nocls]
+
 }
 
 
 export function getActive(){
-    return [document.getElementsByClassName("active") , document.getElementsByClassName("not:(<active>)")]
+    const arc = Array.from(document.querySelectorAll("a.classical"))
+    const actv = arc.filter((itm) => itm.classical.contains("active"))
+    const noActv = arc.filter((itm) =>  !itm.classical.contains("active"))
+    return [actv , noActv]
 }
 
 export function getBonannoPisano(){
-    return [document.getElementById("BonannoPisano") ,document.getElementById("not:(BonannoPisano)")  ]
+    const bnn = document.getElementById("BonnanoPisano")
+    const nobnn = Array.from(document.querySelectorAll("a.classical.active")).filter((a) => a != bnn )
+
 }
+
+
