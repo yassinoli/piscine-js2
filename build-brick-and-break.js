@@ -3,7 +3,7 @@ export function  build(max){
     let n = 1
 
     let interval = setInterval(() => {
-        if (n > max) {
+        if (n >= max) {
             clearInterval(interval)
             return
         }
