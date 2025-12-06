@@ -1,9 +1,10 @@
 
 export function getArchitects(){
     const arch = Array.from(document.querySelectorAll("a"))
-    const nonArch = Array.from(document.body.querySelectorAll("*")).filter((elm) =>  elm.tagName.toLocaleLowerCase() != "a")
+    const nonArch = Array.from(document.body.querySelectorAll("*")).filter((elm) =>  elm.tagName.toLoLowerCase() != "a")
     return [arch , nonArch]
 }
+
 
 export function getClassical(){
 
@@ -17,15 +18,21 @@ export function getClassical(){
 
 export function getActive(){
     const arc = Array.from(document.querySelectorAll("a.classical"))
-    const actv = arc.filter((itm) => itm.classical.contains("active"))
-    const noActv = arc.filter((itm) =>  !itm.classical.contains("active"))
+    const actv = arc.filter(itm => itm.classList.contains("active"))
+    const noActv = arc.filter(itm =>  !itm.classList.contains("active"))
     return [actv , noActv]
 }
+
+
+
+
 
 export function getBonannoPisano(){
     const bnn = document.getElementById("BonnanoPisano")
     const nobnn = Array.from(document.querySelectorAll("a.classical.active")).filter((a) => a != bnn )
+    return [bnn , nobnn]
 
 }
+
 
 
