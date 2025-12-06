@@ -1,7 +1,7 @@
 
 export function getArchitects(){
-    const arch = Array.from(document.querySelectorAll("a"))
-    const nonArch = Array.from(document.body.querySelectorAll("*")).filter((elm) =>  elm.tagName.toLoLowerCase() != "a")
+    const arch = (document.querySelectorAll("a"))
+    const nonArch = (document.body.querySelectorAll("*")).filter((elm) =>  elm.tagName.toLoLowerCase() != "a")
     return [arch , nonArch]
 }
 
