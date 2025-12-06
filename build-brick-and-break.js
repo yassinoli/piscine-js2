@@ -3,7 +3,7 @@ export function  build(max){
     let n = 1
 
     let interval = setInterval(() => {
-        if (n >= max) {
+        if (n > max) {
             clearInterval(interval)
             return
         }
@@ -43,11 +43,9 @@ export function repair(...ids) {
 
 
 export function destroy() {
-    const bricks = Array.from(document.querySelectorAll(".brick"));
-    if (bricks.length === 0) return;
+    const bricks = document.body.querySelectorAll("*");
 
-    const lastBrick = bricks[bricks.length - 1];
-    document.body.removeChild(lastBrick);
+    bricks[bricks.length - 1].remove();
 }
 
 
