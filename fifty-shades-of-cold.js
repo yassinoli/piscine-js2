@@ -11,7 +11,7 @@ export function generateClasses(){
 
 export function generateColdShades(){
     colors.forEach(elm => {
-        if (elm.includes("aqua") || elm.includes("blue") || elm.includes("turquoise")|| elm.includes("green") || elm.includes("cyan") || elm.includes("navy") ){
+        if (elm.includes("aqua") || elm.includes("blue") || elm.includes("turquoise")|| elm.includes("green") || elm.includes("cyan") || elm.includes("navy")  || elm.includes("purple") ){
            const dv = document.createElement("div")
             dv.classList.add(elm)
             dv.textContent = elm
