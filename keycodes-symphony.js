@@ -44,6 +44,7 @@ export function compose(){
          if (leter.includes(event.key) ){
             const  dv = document.createElement("div")
             dv.style.backgroundColor = obj[event.key]
+            dv.setAttribute("class","note")
             dv.innerText = `${event.key}`
             document.body.appendChild(dv)
         }
