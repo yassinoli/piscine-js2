@@ -22,6 +22,7 @@ let turn = false
 
 
 
+
 export function pimp(){
     const elm = document.getElementsByClassName("button")
 
@@ -31,18 +32,17 @@ export function pimp(){
         idx++
         
         if (idx === styles.length){
+             elm[0].classList.add("unpimp")
             turn = true
         }
     }else{
-        if (idx === styles.length){
-            elm[0].classList.add("unpimp")
-        }
-         elm[0].classList.remove(styles[idx])
-        idx--
+        
         if (idx === 0){
             turn = false
-            elm[0].classList.remove("unpimp")
+            elm[0].classList.remove(styles[idx],"unpimp")
         }
+        elm[0].classList.remove(styles[idx])
+        idx--
          
 
     }
