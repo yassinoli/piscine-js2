@@ -30,21 +30,18 @@ export function pimp(){
         elm[0].classList.remove("unpimp")
         elm[0].classList.add(styles[idx])
         idx++
-        
+
         if (idx === styles.length){
-             elm[0].classList.add("unpimp")
+            elm[0].classList.add("unpimp")
             turn = true
         }
     }else{
-        
-        if (idx === 0){
-            turn = false
-            elm[0].classList.remove(styles[idx],"unpimp")
-        }
         elm[0].classList.remove(styles[idx])
         idx--
-         
 
+        if (idx === 0){
+            elm[0].classList.remove("unpimp")
+            turn = false
+        }
     }
-
 }
