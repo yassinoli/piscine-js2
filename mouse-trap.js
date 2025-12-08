@@ -26,22 +26,22 @@ export function moveCircle(){
 
                 dv.style.left = x + "px"
                 dv.style.top = y + "px"
-               if   ( mx > bxps.left + 25 && mx < bxps.right - 25 && my > bxps.top + 25 && my < bxps.bottom - 25) {
-                      dv.dataset.trapped = "true"
-                         dv.style.background = "var(--purple)"
-                             box.appendChild(dv)
-                                 dv.style.position = "absolute"
-                                     dv.style.left = (mx - bxps.left - 25) + "px"
-                                         dv.style.top = (my - bxps.top - 25) + "px"
-                    }
+               if (  x >= bxps.left  &&  x + 50 <= bxps.right  && y >= bxps.top  &&  y + 50 <= bxps.bottom ){
+                    dv.dataset.trapped = "true"
+                    dv.style.background = "var(--purple)"
+                    box.appendChild(dv)
+                    dv.style.position = "absolute"
+                    dv.style.left = x - bxps.left + "px"
+                    dv.style.top =  y - bxps.top + "px"
+                }
 
             } else { 
                const lclX = mx - bxps.left - 25
                const lclY = my - bxps.top - 25
-               const maxX = bxps.width - 50 - 1
-               const maxY = bxps.height - 50 - 1
-               dv.style.left = Math.max(1, Math.min(lclX, maxX)) + "px"
-               dv.style.top = Math.max(1, Math.min(lclY, maxY)) + "px"
+               const maxX = bxps.width - 50 - 2
+               const maxY = bxps.height - 50 - 2
+               dv.style.left = Math.max(0, Math.min(lclX, maxX)) + "px"
+               dv.style.top = Math.max(0, Math.min(lclY, maxY)) + "px"
             }
 
             addEventListener("click", function stop() {
