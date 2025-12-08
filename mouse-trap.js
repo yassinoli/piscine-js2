@@ -27,13 +27,13 @@ export function moveCircle(){
                 dv.style.left = x + "px"
                 dv.style.top = y + "px"
                if   ( mx > bxps.left + 25 && mx < bxps.right - 25 && my > bxps.top + 25 && my < bxps.bottom - 25) {
-                    dv.dataset.trapped = "true"
-                    dv.style.background = "var(--purple)"
-                    box.appendChild(dv)
-                    dv.style.position = "absolute"
-                    dv.style.left = x - bxps.left + "px"
-                    dv.style.top =  y - bxps.top + "px"
-                }
+                      dv.dataset.trapped = "true"
+                         dv.style.background = "var(--purple)"
+                             box.appendChild(dv)
+                                 dv.style.position = "absolute"
+                                     dv.style.left = (mx - bxps.left - 25) + "px"
+                                         dv.style.top = (my - bxps.top - 25) + "px"
+                    }
 
             } else { 
                const lclX = mx - bxps.left - 25
