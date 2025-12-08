@@ -1,13 +1,8 @@
-function invert(obj){
-    let obj2 = {}
-
-    for (let ky in obj){
-        let valu = obj[ky]
-        obj2[valu] = ky
-    }
-
-
-    return obj2
+function invert(obj) {
+  const result = {};
+  for (const key of Object.keys(obj)) {
+    const value = obj[key];
+    result[value] = key;
+  }
+  return result;
 }
-
-
