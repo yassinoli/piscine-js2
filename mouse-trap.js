@@ -26,7 +26,7 @@ export function moveCircle(){
 
                 dv.style.left = x + "px"
                 dv.style.top = y + "px"
-                if (  x >= bxps.left + 1 &&  x + 50 <= bxps.right - 1 && y >= bxps.top + 1 &&  y + 50 <= bxps.bottom - 1 ){
+                if (  x >= bxps.left  &&  x + 50 <= bxps.right - 1 && y >= bxps.top  &&  y + 50 <= bxps.bottom - 1 ){
                     dv.dataset.trapped = "true"
                     dv.style.background = "var(--purple)"
                     box.appendChild(dv)
