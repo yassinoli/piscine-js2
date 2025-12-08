@@ -27,8 +27,8 @@ export function moveCircle(){
                 dv.style.left = x + "px"
                 dv.style.top = y + "px"
                if (  x >= bxps.left  &&  x + 50 <= bxps.right  && y >= bxps.top  &&  y + 50 <= bxps.bottom ){
+                   dv.style.background = "var(--purple)"
                     dv.dataset.trapped = "true"
-                    dv.style.background = "var(--purple)"
                     box.appendChild(dv)
                     dv.style.position = "absolute"
                     dv.style.left = x - bxps.left + "px"
