@@ -31,20 +31,20 @@ function totalCalories(obj) {
   }, 0)
 }
 
-// function lowCarbs(obj){
-//   return filterEntries(obj, ([key,grams])=>{
-//     const nutrition = nutritionDB[key]
-//     return nutrition.carbs * grams / 100 < 50
-//   })
-// }
-
-function cartTotal(obj){
-  return mapEntries(obj, ([key,grams])=>{
+function lowCarbs(obj){
+  return filterEntries(obj, ([key,grams])=>{
     const nutrition = nutritionDB[key]
-    const totals = {}
-    for (const [nutrient, amount] of Object.entries(nutrition)){
-      totals[nutrient] = amount * grams / 100
-    }
-    return [key, totals]
+    return nutrition.carbs * grams / 100 < 50
   })
 }
+
+// function cartTotal(obj){
+//   return mapEntries(obj, ([key,grams])=>{
+//     const nutrition = nutritionDB[key]
+//     const totals = {}
+//     for (const [nutrient, amount] of Object.entries(nutrition)){
+//       totals[nutrient] = amount * grams / 100
+//     }
+//     return [key, totals]
+//   })
+// }
