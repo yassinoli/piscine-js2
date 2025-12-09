@@ -24,12 +24,6 @@ function reduceEntries(obj, func, acc) {
 }
 
 
-function totalCalories(obj) {
-  return reduceEntries(obj, (acc, [key, grams]) => {
-    const nutrition = nutritionDB[key]
-    return acc + nutrition.calories * grams / 100
-  }, 0)
-}
 
 function lowCarbs(obj){
   return filterEntries(obj, ([key,grams])=>{
