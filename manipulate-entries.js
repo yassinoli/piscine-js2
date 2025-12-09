@@ -46,7 +46,7 @@ function cartTotal(obj){
     const nutrition = nutritionDB[key]
     const totals = {}
     for (const [nutrient, amount] of Object.entries(nutrition)){
-      totals[nutrient] = amount * grams / 100
+      totals[nutrient] = Number((amount * grams / 100).toFixed(3))
     }
     return [key, totals]
   })
