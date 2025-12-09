@@ -1,9 +1,14 @@
 function filterValues(obj , func){
         let res = {}
         Object.keys(obj).forEach((elm) =>{
-           if (func(obj[elm])){
+            if (typeof obj[elm] !== 'object'){
+                if (func(obj[elm])){
             res[elm] = obj[elm]
            }
+            }else{
+               res[elm] =  filterValues(obj[elm] , func)
+            }
+           
         })
         return res
 }
@@ -27,6 +32,5 @@ function reduceValues(obj , func){
         })
         return res
 }
-
 
 
