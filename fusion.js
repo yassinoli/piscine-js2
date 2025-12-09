@@ -35,4 +35,4 @@ return obj3
 
 }
 
-console.log(fusion({ nbr: 12 }, { nbr: 23 }));
+console.log(fusion({ nbr: 12 }, { nbr1: 23 }));

@@ -27,7 +27,7 @@ function reduceEntries(obj, func, acc) {
 function totalCalories(obj) {
   return reduceEntries(obj, (acc, [key, grams]) => {
     const nutrition = nutritionDB[key]
-    return acc + nutrition.calories * grams / 100
+    return Math.floor(acc + nutrition.calories * grams / 100)
   }, 0)
 }
 
@@ -38,13 +38,13 @@ function lowCarbs(obj){
   })
 }
 
-// function cartTotal(obj){
-//   return mapEntries(obj, ([key,grams])=>{
-//     const nutrition = nutritionDB[key]
-//     const totals = {}
-//     for (const [nutrient, amount] of Object.entries(nutrition)){
-//       totals[nutrient] = amount * grams / 100
-//     }
-//     return [key, totals]
-//   })
-// }
+function cartTotal(obj){
+  return mapEntries(obj, ([key,grams])=>{
+    const nutrition = nutritionDB[key]
+    const totals = {}
+    for (const [nutrient, amount] of Object.entries(nutrition)){
+      totals[nutrient] = amount * grams / 100
+    }
+    return [key, totals]
+  })
+}
