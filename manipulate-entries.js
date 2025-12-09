@@ -1,12 +1,11 @@
-function filterEntries(obj , func){
-  let res = {}
-  for (let [key ,val] of Object.entries(obj)){
-    if (func([key,val])){
-      res[key] = val
-    }
+function filterEntries(obj, func) {
+  const res = {}
+  for (const [key, val] of Object.entries(obj)) {
+    if (func([key, val])) res[key] = val
   }
   return res
 }
+
 
 function mapEntries(obj , func){
   let res = {}
@@ -18,16 +17,17 @@ function mapEntries(obj , func){
 }
 
 function reduceEntries(obj, func, acc) {
-  for (const [key, value] of Object.entries(obj)) {
-    acc = func(acc, [key, value])
+  for (const entry of Object.entries(obj)) {
+    acc = func(acc, entry)
   }
   return acc
 }
 
+
 function totalCalories(obj) {
   return reduceEntries(obj, (acc, [key, grams]) => {
     const nutrition = nutritionDB[key]
-    return Math.floor(acc + nutrition.calories * grams / 100)
+    return acc + nutrition.calories * grams / 100
   }, 0)
 }
 
@@ -48,3 +48,4 @@ function cartTotal(obj){
     return [key, totals]
   })
 }
+
