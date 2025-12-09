@@ -1,36 +1,31 @@
 function filterValues(obj , func){
-        let res = {}
-        Object.keys(obj).forEach((elm) =>{
-            if (typeof obj[elm] !== 'object'){
-                if (func(obj[elm])){
-            res[elm] = obj[elm]
-           }
-            }else{
-               res[elm] =  filterValues(obj[elm] , func)
-            }
-           
-        })
-        return res
+        let arr = Object.entries(obj)
+        let result = arr.filter(([key , val])=>
+            func(val)
+        )
+        return Object.fromEntries(result)
 }
 
 
 
 function mapValues(obj , func){
-    let res = {} 
-      Object.keys(obj).forEach((elm) =>{  
-            res[elm] = obj[elm]+1
-        })
-        return res
+    let arr = Object.entries(obj)
+        let result = arr.map(([key , val])=>
+           [key , func(val)]  
+        )
+        return Object.fromEntries(result)
     }
 
 
 
-function reduceValues(obj , func){
-  let res = 0 
-      Object.keys(obj).forEach((elm) =>{  
-           res +=  obj[elm]
-        })
-        return res
-}
+function reduceValues(obj , func , acc1=0){
+     let arr =[acc1]
+     arr.push(...Object.values(obj))
+        let result = arr.reduce(( val , acc )=>
+           func(val , acc  ) 
+        )
+        return result
+    }
 
 
+  
