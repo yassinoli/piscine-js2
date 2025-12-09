@@ -31,8 +31,8 @@ function fusion(obj1, obj2){
         }
     })
 
-
+return obj3
 
 }
 
-console.log(Object.keys({hey:"21" , het:"14"}).length);
+console.log(fusion({ nbr: 12 }, { nbr: 23 }));
