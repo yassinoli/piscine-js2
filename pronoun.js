@@ -19,6 +19,3 @@ function pronoun(str) {
 
   return res
 }
-ex = 'I buy,\ni to,\nYOU buy,\nit have,\nIt buys,\nit is,\nyou go'
-
-console.log(pronoun(ex));
