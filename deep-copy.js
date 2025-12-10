@@ -9,7 +9,7 @@ function deepCopy(obj){
             }
         }
     }else{
-        for(ky of Object.keys(obj)){
+        for(let ky of Object.keys(obj)){
             if (typeof obj[ky] === 'object'){
                res[ky] = deepCopy(obj[ky])
             }else{
