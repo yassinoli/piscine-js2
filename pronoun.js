@@ -1,6 +1,6 @@
 function pronoun(str) {
   const arr = ['i', 'you', 'he', 'she', 'it', 'they', 'we']
-  const w = str.split(/\s+/)
+  const w = str.split(/\s+|[.]|[,]/)
   const res = {}
 
   for (let i = 0; i < w.length; i++) {
@@ -19,3 +19,6 @@ function pronoun(str) {
 
   return res
 }
+ex = 'I buy,\ni to,\nYOU buy,\nit have,\nIt buys,\nit is,\nyou go'
+
+console.log(pronoun(ex));
