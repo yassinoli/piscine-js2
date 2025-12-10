@@ -1,6 +1,6 @@
 function pronoun(str) {
   const arr = ['i', 'you', 'he', 'she', 'it', 'they', 'we']
-  const w = str.split(' ')
+  const w = str.split(/\s+/)
   const res = {}
 
   for (let i = 0; i < w.length; i++) {
@@ -19,5 +19,3 @@ function pronoun(str) {
 
   return res
 }
-
-
