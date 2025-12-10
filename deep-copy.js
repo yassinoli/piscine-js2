@@ -1,5 +1,11 @@
 function deepCopy(obj){
-    let res 
+    let res;
+    if (Array.isArray(obj)){
+        res = []
+    } else {
+        res = {}
+    }
+
     if (Array.isArray(obj)){
         for(let i=0 ; i<obj.length; i++){
             if (obj[i] instanceof Array){
@@ -10,7 +16,7 @@ function deepCopy(obj){
         }
     }else{
         for(let ky of Object.keys(obj)){
-            if (typeof obj[ky] === 'object'){
+            if (obj[ky] && typeof obj[ky] === 'object'){
                res[ky] = deepCopy(obj[ky])
             }else{
                 res[ky] = obj[ky]
