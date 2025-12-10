@@ -41,11 +41,11 @@ function filterCurry(func){
     }
 }
 
-function reduceScore(obj){
+function reduceScore(obj , acc){
    let obj1 = filterCurry(([k,v])=>v["isForceUser"])(obj)
    
-  return reduceCurry((acc , [ky , val])=>{
-    return acc + val["pilotingScore"] + val["shootingScore"]
+  return acc + reduceCurry((ac , [ky , val])=>{
+    return ac + val["pilotingScore"] + val["shootingScore"]
    })(obj1,0)
 }
 
@@ -59,4 +59,3 @@ function mapAverage(obj){
     let obj1 = mapCurry( ([k , v]) => [k, {averageScore : (v['pilotingScore'] + v['shoutingScore'])/2}])(obj)
     return obj
 }
-
