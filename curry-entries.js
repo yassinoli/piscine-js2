@@ -56,8 +56,9 @@ function filterForce(obj){
 }
 
 function mapAverage(obj){
-    let obj1 = mapCurry( ([k , v]) => [k, {averageScore : (v['pilotingScore'] + v['shoutingScore'])/2}])(obj)
-    return obj
-}
-
+  console.log(obj);
   
+    let obj1 = mapCurry( ([k , v]) => [k, {averageScore : ( (v.pilotingScore +  v.shootingScore)/2)}])(obj)
+    
+    return obj1
+}
