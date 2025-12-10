@@ -52,10 +52,12 @@ function reduceScore(obj , acc){
 function filterForce(obj){
   let obj1 = filterCurry(([k, v]) => v.shootingScore >= 80)(obj);
 
-  return mapCurry(([k, v]) => [k, v.isForceUser])(obj1);
+  return filterCurry(([k, v]) => v.isForceUser )(obj1);
 }
 
 function mapAverage(obj){
     let obj1 = mapCurry( ([k , v]) => [k, {averageScore : (v['pilotingScore'] + v['shoutingScore'])/2}])(obj)
     return obj
 }
+
+  
