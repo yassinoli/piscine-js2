@@ -1,10 +1,9 @@
-function debounce(func , t){
-    let r
-   return function(...args){ 
-    clearTimeout (r)
-    r =  setTimeout(() => {
-      return  func(args)
-    }, t);}
+function debounce(func, t) {
+  let r;
+  return function (...args) {
+    clearTimeout(r);
+    r = setTimeout(() => func.apply(this, args), t);
+  };
 }
 
 function opDebounce(func , wait , {leading = false} = {}){
