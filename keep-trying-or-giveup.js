@@ -3,7 +3,7 @@ function retry(count, callback) {
       try {
         return callback(...args);
       } catch (err) {
-            if (count===0){return err}
+            if (count===1){return err}
         count--;
       }
     
