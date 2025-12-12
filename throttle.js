@@ -14,7 +14,7 @@ function opThrottle(f, t, { trailing = false, leading = true } = {}) {
   let r = null,
     q = null;
   return (...arg) => {
-    if (!r && leading) f(...a);
+    if (!r && leading) f(...arg);
     if (!r) {
       r = setTimeout(() => {
         r = null;
