@@ -1,14 +1,12 @@
 function retry(count, callback) {
   return (...args) => {
-    let lastErr;
-    for (let i = count; i > 0; i--) {
       try {
         return callback(...args);
       } catch (err) {
-        lastErr = err;
+            if (count===0){return err}
+        count--;
       }
-    }
-    throw lastErr;
+    
   };
 }
 
