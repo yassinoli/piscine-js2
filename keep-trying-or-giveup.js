@@ -4,8 +4,7 @@ function retry(count, callback) {
      while(c>0) {try {
         return await callback(...args);
       } catch (err) {
-        
-        if (c===0) throw new Error("failed")
+        if (c===0) throw new Error(err.message)
             c--
       }}
     
