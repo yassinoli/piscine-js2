@@ -17,13 +17,19 @@ function retry(count, callback) {
 function timeout(del, callback) {
   return (...args) => {
     return new Promise((res, rej) => {
-      setTimeout(async () => {
-        try {
-               res(await callback(...args));
-        } catch (err) {
-          rej(new Error("timeout"));
-        }
+      const timer = setTimeout(() => {
+        rej(new Error("timeout"));
       }, del);
+      Promise.resolve(callback(...args))
+        .then(v => {
+          clearTimeout(timer);
+          res(v);
+        })
+        .catch(err => {
+          clearTimeout(timer);
+          rej(err);
+        });
+
     });
   };
 }
