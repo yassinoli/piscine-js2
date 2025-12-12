@@ -21,7 +21,7 @@ function timeout(del, callback) {
         try {
                res(await callback(...args));
         } catch (err) {
-          rej(err);
+          rej(err.message);
         }
       }, del);
     });
