@@ -1,6 +1,6 @@
 function retry(count, callback) {
   return async (...args) => {
-    let c = count+1
+    let c = count
      while(c>0) {try {
         return await callback(...args);
       } catch (err) {
