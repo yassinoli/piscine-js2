@@ -1,10 +1,9 @@
 function retry(count, callback) {
   return (...args) => {
-    while (count > 0) {
+    for(let i=count ; i>0 ; i-- ) {
       try {
         return callback(...args);
       } catch (err) {
-        count--;
       }
     }
   };
