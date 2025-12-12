@@ -16,6 +16,9 @@ function opThrottle(f, t, option = {}) {
     if (!r && option.leading) f(...arg);
     if (!r) {
       r = setTimeout(() => {
+        if( !option.leading){
+            f(...arg)
+        }
         r = null;
       }, t);
     }
