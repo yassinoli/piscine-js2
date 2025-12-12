@@ -1,12 +1,12 @@
 function retry(count, callback) {
   return async (...args) => {
-    let c = count
+    let c = count+1
      while(c>0) {try {
         return await callback(...args);
       } catch (err) {
-          c--
+        
         if (c===0) throw new Error("failed")
-          
+            c--
       }}
     
   };
