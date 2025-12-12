@@ -1,11 +1,12 @@
 function retry(count, callback) {
-  return (...args) => {
-      try {
-        return callback(...args);
+  return async (...args) => {
+    let c = count+1
+     while(c>0) {try {
+        return await callback(...args);
       } catch (err) {
-            if (count===1){return err}
-        count--;
-      }
+        c--
+        if (c===0) throw new Error("failed")
+      }}
     
   };
 }
@@ -23,3 +24,5 @@ function timeout(del, callback) {
     });
   };
 }
+
+
