@@ -4,8 +4,8 @@ function interpolation(option = {}){
   
  for (let i = 1 ; i<option.step ; i++) {
         setTimeout(() => {
-            x= option.start + dist*i
-            y = option.point*i
+            const x= option.start + dist*i
+           const  y = option.point*i
             option.callback([x,y])
             
         }, point*i);
