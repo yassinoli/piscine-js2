@@ -10,16 +10,14 @@ function throttle(func, t) {
   };
 }
 
-function opThrottle(f, t, { trailing = false, leading = true } = {}) {
-  let r = null,
-    q = null;
+function opThrottle(f, t, option = {}) {
+  let r = null
   return (...arg) => {
-    if (!r && leading) f(...arg);
+    if (!r && option.leading) f(...arg);
     if (!r) {
       r = setTimeout(() => {
         r = null;
       }, t);
     }
-    q = arg;
   };
 }
