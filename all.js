@@ -1,6 +1,6 @@
-function all(obj){
+function all(obj={}){
     if(!obj){
-        return undefined
+        return {}
     }
     let ky = Object.valus(obj)
     return Promise.all([...ky])
