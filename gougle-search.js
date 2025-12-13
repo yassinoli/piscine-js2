@@ -12,7 +12,7 @@ function gougleSearch(q){
     })
      let timout = new Promise((res , rej)=>{
         setTimeout(() => {
-            rej(Error('timeoute'))
+            rej(Error('timeout'))
         }, 80);
      })
     return Promise.race([allprom , timout])
