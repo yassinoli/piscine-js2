@@ -49,6 +49,6 @@ function cartTotal(obj){
       totals[nutrient] = Number((amount * grams / 100).toFixed(3))
     }
     return [key, totals]
-  })
+  }) 
 }
 

@@ -10,3 +10,4 @@ function interpolation({ step, start, end, callback, duration }) {
         }, timeStep * i)
     }
 }
+

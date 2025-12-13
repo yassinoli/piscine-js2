@@ -10,6 +10,7 @@ function replica(obj, ...sources) {
       ) {
         obj[kv[0]] = kv[1];
       } else if (typeof kv[1] == "object" && typeof obj[kv[0]] == "object") {
+        
         obj[kv[0]] = replica(obj[kv[0]], source[kv[0]]);
       } else if (typeof kv[1] == "object" && typeof obj[kv[0]] != "object") {
         obj[kv[0]] = kv[1];

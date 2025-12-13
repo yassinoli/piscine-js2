@@ -1,9 +1,10 @@
 function pronoun(str) {
   const arr = ['i', 'you', 'he', 'she', 'it', 'they', 'we']
-  const w = str.toLowerCase().split(/\s+|[.]|[,]/).filter(Boolean)
+  const w = str.split(/\s+/)
   const res = {}
 
   for (let i = 0; i < w.length; i++) {
+    
     if (arr.includes(w[i])) {
       if (!res[w[i]]) {
         res[w[i]] = { word: [], count: 0 }
@@ -18,3 +19,4 @@ function pronoun(str) {
 
   return res
 }
+

@@ -1,7 +1,9 @@
-function all(obj={}){
+function all(obj){
     if(!obj){
-        return {}
+        return undefined
     }
-    let ky = Object.valus(obj)
-    return Promise.all([...ky])
+    
+    let prom = new Promise((res,rej)=>{
+        
+    })
 }

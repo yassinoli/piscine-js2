@@ -5,6 +5,8 @@ function debounce(func, t) {
     r = setTimeout(() => func.apply(this, args), t);
   };
 }
+
+
 function opDebounce(func, wait, { leading = false } = {}) {
   let timer = null;
   let leadingCalled = false;
