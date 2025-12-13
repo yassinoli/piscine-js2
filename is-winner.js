@@ -13,7 +13,7 @@ async function isWinner(country){
         return `${country}` + 'never was a winner'
        }
        if (result.length < 3){
-        return `${country} is not what we are looking for because the number of times it was champion`
+        return `${country} is not what we are looking for because of the number of times it was champion`
        }
        return 'Country won the FIFA World Cup in' + result.map(res => res.year ).join(',') + 'Winning by' + result.map(item => res.score ).join(',')
     }catch (err){
