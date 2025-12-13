@@ -1,7 +1,7 @@
 async function queryServers(serverName , q){
-    let fst = await getJSON(`/${serverName}?q=${q}`)
-    let snd = await getJSON(`/${serverName}_backup?q=${q}`)
-    return  Promise.race([fst , snd])
+    
+     
+    return  Promise.race([getJSON(`/${serverName}?q=${q}`) , getJSON(`/${serverName}_backup?q=${q}`)])
 }
 
 function gougleSearch(q){
