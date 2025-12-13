@@ -1,3 +1,4 @@
+
 async function getJSON(path, params) {
     let url = path
 
@@ -13,9 +14,6 @@ async function getJSON(path, params) {
 
     const data = await response.json()
 
-    if (data.data) {
-        return data.data
-    } else {
-        throw new Error(data.error)
-    }
+    return data.data ?? data
 }
+
