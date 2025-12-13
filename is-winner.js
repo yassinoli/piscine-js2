@@ -16,7 +16,7 @@ async function isWinner(country){
         return `${country} is not what we are looking for because of the number of times it was champion`
        }
        
-       return `${country} won the FIFA World Cup in ` + result.map(res => res.year ).join(', ') + ' Winning by ' + result.map(res => res.score ).join(', ')
+       return `${country} won the FIFA World Cup in ` + result.map(res => res.year ).join(', ') + ' winning by ' + result.map(res => res.score ).join(', ')
     }catch (err){
         if (err.message === 'Country Not Found'){
             return `${country} never was a winner`
