@@ -1,6 +1,4 @@
 async function queryServers(serverName , q){
-    
-     
     return  Promise.race([getJSON(`/${serverName}?q=${q}`) , getJSON(`/${serverName}_backup?q=${q}`)])
 }
 
