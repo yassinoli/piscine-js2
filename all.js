@@ -9,7 +9,7 @@ function all(obj){
         return
     }
     for (const k of ky){
-        Promise.res(obj[k]).then(val =>{ 
+        res(obj[k]).then(val =>{ 
             result[k]=val
            rem--
            if (rem===0){
