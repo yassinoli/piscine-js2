@@ -1,9 +1,22 @@
 function all(obj){
-    if(!obj){
-        return undefined
+ 
+    return new Promise((res , rej)=>{
+        const ky = Object.keys(obj)
+    const result = {}
+    let rem = ky.length
+    if(rem===0){
+        res(result)
+        return
     }
-    
-    let prom = new Promise((res,rej)=>{
-        
+    for (const k of ky){
+        Promise.res(obj[k]).then(val =>{ 
+            result[k]=val
+           rem--
+           if (rem===0){
+            res(result)
+           }
+        }).catch(rej)
+    }
     })
+    
 }
