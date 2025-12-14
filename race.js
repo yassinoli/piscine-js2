@@ -8,33 +8,29 @@ function race(arr) {
     });
 }
 
-function some(arr, count) {
+function some(arr, c) {
     return new Promise((resolve, reject) => {
-        if ( arr.length === 0 || count === 0) {
-            return resolve(undefined);
+        if ( arr.length === 0 || c === 0) {
+            return resolve([]);
         }
         const results = [];
         let don = 0;
         let rej = 0;
         arr.forEach(item => {
             Promise.resolve(item)
-                .then(value => {
-                    if (don < count) {
-                        results.push(value);
-                        don++;
-
-                        if (don === count) {
-                            resolve(results);
-                        }
-                    }
+            .then(value => {
+             if (don < c) {
+              results.push(value);
+              don++;
+              if (don === c) {
+                  resolve(results);
+              }
+             }
                 })
                 .catch(err => {
                     rej++;
-                    if (rej > arr.length - count) {
-                        reject(new AggregateError(
-                            [err],
-                            "Not enough promises don"
-                        ));
+                    if (rej > arr.length - c) {
+                        reject( Error("error"));
                     }
                 });
         });
