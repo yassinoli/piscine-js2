@@ -23,7 +23,7 @@ function some(arr, c) {
               results.push(value);
               don++;
               if (don === c) {
-                  resolve(results);
+                  resolve(results.reverse());
               }
              }
                 })
