@@ -3,5 +3,5 @@ async function all(obj){
     for(let k in obj){
       res[k]   =  await Promise.resolve(obj[k])
     }
-    
+    return res
 }
