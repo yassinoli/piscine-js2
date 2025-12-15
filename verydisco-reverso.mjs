@@ -2,7 +2,7 @@ import { readFile }  from 'node:fs/promises';
 
 
 
-const args = readFile(process.argv[2])
+const args = await readFile(process.argv[2],'utf8')
 
 let spl = args[0]
 
