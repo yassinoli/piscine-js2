@@ -1,5 +1,4 @@
-import { write } from "bun";
-
+import { writeFile } from 'node:fs/promises';
 const args = process.argv.slice(2)
 
 let spl = args[0]
@@ -18,4 +17,4 @@ spl.split(' ').forEach(elm => {
 
     let result = res.join(' ')
 
-    write('verydisco-forever.txt',result)
+    writeFile('verydisco-forever.txt',result)
