@@ -11,7 +11,7 @@ if (arg2==='decode'){
   await  writeFile(arg3 ?? 'clear.txt' , Buffer.from(file).toString('base64') )
 }
 if (arg2==='encode'){
-  await  writeFile(arg3 ?? 'cypher.txt', Buffer.from(file, 'base64' ).toString('utf8'))
+  await  writeFile(arg3 ?? 'cypher.txt', Buffer.from(file, 'utf8' ).toString('base64'))
 }
 
  
