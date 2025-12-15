@@ -6,7 +6,7 @@ let res = []
 
 
 spl.forEach(element => {
-    element.split(' ').forEach(elm => {
+    element.split(' ')[0].forEach(elm => {
     let tmp = ""
     tmp+= elm.slice(Math.ceil(elm.length/2))
     tmp+= elm.slice(0,Math.ceil(elm.length/2))
