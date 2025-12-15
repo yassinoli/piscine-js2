@@ -11,8 +11,8 @@ let res = []
 
 spl.split(' ').forEach(elm => {
     let tmp = ""
-    tmp+= elm.slice(Math.ceil(elm.length/2))
-    tmp+= elm.slice(0,Math.ceil(elm.length/2))
+    tmp+= elm.slice((elm.length/2))
+    tmp+= elm.slice(0,(elm.length/2))
     res.push(tmp)
     
 
