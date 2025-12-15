@@ -4,7 +4,7 @@ import { readFile }  from 'node:fs/promises';
 
 const args = await readFile(process.argv[2],'utf8')
 
-let spl = args[0]
+let spl = args
 
 let res = []
 
