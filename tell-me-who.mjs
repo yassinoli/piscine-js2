@@ -17,7 +17,7 @@ res.forEach(element => {
 result = result.sort()
 
 result.forEach((element , idx) => {
-   console.log( ((idx + '. ' + element )));
+   console.log( ((idx+1 + '. ' + element )));
   
 });
 
