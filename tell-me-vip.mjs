@@ -28,5 +28,5 @@ result = result.sort()
 
 
 writeFile('vip.txt' ,result.map((item,idx) => {
-    return idx+1 + '.' + item + idx !== result.length-1 ? '\n' : ''
+    return idx+1 + '.' + item + idx !== result.length-1 ? '\n' : 's'
 }))
