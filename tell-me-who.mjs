@@ -20,4 +20,4 @@ let resultt = result.forEach((element , idx) => {
     result.push(`${idx}. ${element}`)
 });
 
-console.log(result.join('\n'));
+console.log(resultt.join('\n'));
