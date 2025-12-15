@@ -17,7 +17,7 @@ res.forEach(element => {
 result = result.sort()
 
 let resultt = result.forEach((element , idx) => {
-    result.push(`${idx}. ${element}`)
+    result.push(`${idx}. ${element}+ \n`)
 });
 
 console.log(resultt.join('\n'));
