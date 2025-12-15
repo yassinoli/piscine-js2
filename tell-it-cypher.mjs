@@ -1,6 +1,5 @@
 import { readFile }  from 'fs/promises';
 import { writeFile } from 'node:fs/promises';
-import { Buffer } from 'node:buffer';
 
 
 let arg1 = process.argv[2]
