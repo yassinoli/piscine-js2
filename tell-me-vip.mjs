@@ -25,10 +25,7 @@ res.forEach(element => {
 });
 result = result.sort()
 
-result.forEach((element , idx) => {
-   console.log( ((idx+1 + '.  ' + element )));
-  
-});
+
 
 writeFile('vip.txt' ,result.map((item,idx) => {
     return idx+1 + '. ' + item + '\n'
