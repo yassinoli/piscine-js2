@@ -1,15 +1,13 @@
 const args = process.argv.slice(2)
 
-let spl = args
+const res = []
 
-let res = []
+args.forEach(word => {
+  const cut = Math.ceil(word.length / 2)
 
+  const wrd = word.slice(cut) + word.slice(0, cut)
 
+  res.push(wrd)
+})
 
-spl.forEach(elm => {
-    let tmp = ""
-    tmp+= elm.slice(Math.ceil(elm.length/2))
-    tmp+= elm.slice(0,Math.ceil(elm.length/2))
-    res.push(tmp)
-});
-    console.log(res.join(' '))
+console.log(res.join(' '))
