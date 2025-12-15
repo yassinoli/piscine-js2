@@ -7,7 +7,17 @@ let rdd = await  readdir(args)
 let res = []
 
 rdd.forEach((elm , idx) => {
-    res.push(idx+1 + '. ' + (elm.split('_').join(' ').split('.')).slice(0, -1))
+    res.push((elm.split('_').join(' ').replace(".json",'')))
 });
 
-console.log(res.join('\n'));
+let result = []
+res.forEach(element => {
+    result.push(element.split(' ').reverse().join(' '))
+});
+result = result.sort()
+
+let resultt = result.forEach((element , idx) => {
+    result.push(`${idx}. ${element}`)
+});
+
+console.log(result.join('\n'));
