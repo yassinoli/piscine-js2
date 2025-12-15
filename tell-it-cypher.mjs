@@ -8,10 +8,10 @@ let arg3 = process.argv[4]
 
 let file = await readFile(arg1 , 'utf8')
 if (arg2==='decode'){
-    writeFile(arg3 ?? 'clear.txt' , Buffer.from(file).toString('base64') )
+  await  writeFile(arg3 ?? 'clear.txt' , Buffer.from(file).toString('base64') )
 }
 if (arg2==='encode'){
-    writeFile(arg3 ?? 'cypher.txt', Buffer.from(file, 'base64' ).toString('utf8'))
+  await  writeFile(arg3 ?? 'cypher.txt', Buffer.from(file, 'base64' ).toString('utf8'))
 }
 
  
