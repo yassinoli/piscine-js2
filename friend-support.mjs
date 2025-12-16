@@ -1,35 +1,42 @@
 import http from 'http'
-import { readFile }  from 'fs/promises';
-import { readdir } from 'node:fs/promises';
-let guest = await readdir('guests')
+import { readFile, readdir } from 'node:fs/promises'
 
 const port = 5000
 
-const server  = http.createServer(async (req , res)=>{
-    let check = req.url.replace('/','')
-    res.setHeader('Content-Type','application/json')
-    try{
+const server = http.createServer(async (req, res) => {
+  try {
+    const name = req.url.slice(1) 
+    const files = await readdir('guests')
 
-        if (guest.includes(check+'.json')){
-            let jsn =  await readFile('guests/'+`${check}`+'.json' , 'utf8')
-            let jason = JSON.parse(jsn)
-            res.writeHead(200)
-            res.end(JSON.stringify(jason))
-        }else{
-            res.writeHead(404)
-            res.end(JSON.stringify({
-        error : 'guest not found'
-      }))
-        }
+    if (files.includes(name + '.json')) {
+      const data = await readFile(`guests/${name}.json`, 'utf8')
+
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+      })
+      res.end(data)
+    } else {
+      res.writeHead(404, {
+        'Content-Type': 'application/json',
+      })
+      res.end(
+        JSON.stringify({
+          error: 'guest not found',
+        }),
+      )
     }
-    catch{
-      res.writeHead(500)
-      res.end(JSON.stringify({
-        error : 'server failed'
-      }))
-    }
+  } catch (err) {
+    res.writeHead(500, {
+      'Content-Type': 'application/json',
+    })
+    res.end(
+      JSON.stringify({
+        error: 'server failed',
+      }),
+    )
+  }
 })
 
-server.listen(port , ()=>{
-    console.log("server start at port" , port);
-}) 
+server.listen(port, () => {
+  console.log('server start at port', port)
+})
