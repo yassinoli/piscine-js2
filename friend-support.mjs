@@ -7,6 +7,7 @@ const port = 5000
 
 const server  = http.createServer(async (req , res)=>{
     let check = req.url.replace('/','')
+    res.setHeader('Content-Type','application/json')
     try{
 
         if (guest.includes(check+'.json')){
