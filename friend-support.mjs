@@ -16,12 +16,16 @@ const server  = http.createServer(async (req , res)=>{
             res.end(JSON.stringify(jason))
         }else{
             res.writeHead(404)
-            res.end("not found")
+            res.end(JSON.stringify({
+        error : 'guest not found'
+      }))
         }
     }
     catch{
       res.writeHead(500)
-      throw new Error("server failed")
+      res.end(JSON.stringify({
+        error : 'server failed'
+      }))
     }
 })
 
