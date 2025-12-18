@@ -6,7 +6,7 @@ let rdd = await  readdir(args)
 
 let res = []
 
-rdd.forEach((elm , idx) => {
+rdd.forEach((elm) => {
     res.push((elm.split('_').join(' ').replace(".json",'')))
 });
 
